@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Coffee Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <p>Order List</p>
+    </header>
+
+    <main>
+        <section class="order-list">
+            <ul id="adminOrderList"></ul>
+        </section>
+    </main>
+    <script>
+        const orders = JSON.parse(localStorage.getItem("orders")) || [];
+        const list = document.getElementById(adminOrderList);
+
+        if (orders.length === 0) {
+            list.innerHTML = "<li>No orders found.</li>";
+        } else {
+            orders.forEach((order, index) => {
+                const li = document.getElementById("li");
+                li.innerText = '${index = 1}. ${order.name} ordered ${order.coffee}';
+
+                const delBtn = document.createElement("button");
+                delBtn,innerText = "Delete";
+                delBtn.style.marginLeft = "10px";
+                delBtn.onclick = () => {
+                    orders.splice(index, 1);
+                    localStorage.setItem("orders", JSON.stringify(orders));
+                    renderOrders();
+                };
+
+                li.appendChild(delBtn);
+                list.appendChild(li);
+            });
+        }
+
+        renderOrders();
+    </script>
+</body>
+</html>

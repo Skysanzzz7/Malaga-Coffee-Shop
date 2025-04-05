@@ -1,0 +1,185 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+header {
+    background-color: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.menu {
+    text-align: center;
+}
+
+.coffee-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0, 1);
+    overflow: hidden;
+    padding: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0, 15);
+}
+
+.coffee-card h3 {
+    margin-top: 12px;
+    font-size: 20px;
+    color: #333;
+}
+
+.coffee-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.coffee-card button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.coffee-card button:hover {
+    background-color: #5a3b2d;
+}
+
+.coffee-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.coffee-card Img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a3c2d;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+.order {
+    background-color: #f8f1e7;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode header {
+    background-color: #2b2b2b;
+}
+
+body.dark-mode .coffee-card,
+body.dark-mode .order {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark-mode button {
+    background-color: #444;
+}
+
+body.dark-mode footer {
+    background-color: #2b2b2b;
+}
+
+.cart, .order-summary {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff3e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0, 1);
+}
+
+body.dark-mode .cart,
+body.dark-mode .order-summary {
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6 forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.order-list button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-list button:hover {
+    background-color: darkred;
+}

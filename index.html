@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaga Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('section, .coffee-card').forEach(el => {
+            el.classList.add('fade-in');
+        });
+    });
+</script>
+<body>
+    <header>
+        <h1>Welcome to Malaga Coffee Shop</h1>
+        <p>Complement Your Day!!</p>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>Our Coffee Menu</h2>
+            <div class="coffee-card">
+                <img src="Image/Espresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rp28.000</p>
+                <button onclick="ShowDetails('Espresso')">View Details</button>
+            </div>
+            <div class="coffee-card">
+                <img src="Image/Latte.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Rp24.000</p>
+                <button onclick="ShowDetails('Latte')">View Details</button>
+            </div>
+            <div class="coffee-card">
+                <img src="Image/cappucino.jpg" alt="cappucino">
+                <h3>Cappuccino</h3>
+                <p>Rp28.000</p>
+                <button onclick="ShowDetails('Cappuccino')">View Details</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Malaga Coffee Shop. All Rights Reserved.</p>
+    </footer>
+
+    <section class="order">
+        <h2>Order Your Coffee</h2>
+        <form id="orderForm">
+            <label for="coffee">Choose Coffee</label>
+            <select name="coffee" id="coffee">
+                <option value="Latte">Latte</option>
+                <option value="Cappuccino">Cappuccino</option>
+                <option value="Espresso">Espresso</option>
+            </select>
+
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <section class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+    </section>
+
+    <section class="order-summary" id="orderSummary" style="display: none;">
+        <h2>Order Summary</h2>
+        <p id="summaryText"></p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
